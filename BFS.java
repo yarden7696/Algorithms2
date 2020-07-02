@@ -80,8 +80,7 @@ import java.util.Queue;
 
         public boolean IsTherePathBetween_v_and_u(int v, int u) {
             BFS_Algo(v);
-            if (color[u] == 2)
-                return true;
+            if (color[u] == 2)  return true;
             return false;
         }
 
