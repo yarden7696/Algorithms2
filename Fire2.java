@@ -47,7 +47,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 
             int radius = 0, diameter = 0, numCenters = 0;
             int[] degrees = new int[len]; // create an array of degrees
-            int[] levels = new int[len]; //// create an array of 
+            int[] levels = new int[len]; //// create an array of
 
             // queue initialization, len - number of vertices
             for (int i = 0; i<len; i++){ // init thw queue with the all leaves
