@@ -61,14 +61,17 @@ public class Best {
         }
         return new int[]{max, sIndx, eIndx};
 
-
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(best(new int[]{1, 7, 2, 3, -13, 2, 1, 10,-2,1,-20})));
-//        System.out.println(Arrays.toString(best(new int[]{-8, -5, -2})));
-//        System.out.println(Arrays.toString(best(new int[]{4, -4, -2, 1, -4, 8})));
-//        System.out.println(Arrays.toString(best(new int[]{6, -1, -2, 5, -8})));
+       // int [] b=  new int[]{1, 7, 2, 3, -13, 2, 1, 10,-2,1,-20};
+        int [] b=  new int[]{7, -9, 2, 1};
+        System.out.println("before best cycle : ");
+        System.out.println(Arrays.toString(best(b)));
+        System.out.println("---------------------------------------------------------------------------");
+        System.out.println("after best cycle : ");
+        System.out.println(Arrays.toString(bestCycle(b)));
+
     }
 }
 
