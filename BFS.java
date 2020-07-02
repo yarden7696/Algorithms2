@@ -50,7 +50,7 @@ import java.util.Queue;
                 v = q.poll();
                 for (int u = 0; u < numV; u++) {
                     if (color[u] == 0 && mat[v][u] == 1){  // here we check the nei of v,all u's are nei
-                           // caz they in the col of v. if u is white and _____(what is mat)?
+                           // caz they in the col of v. if u is white and there is path between u and v so -
                         color[u] = 1; // colors u with gray
                         distance[u] = distance[v]+1; //  set his distance
                         father[u] = v; // set his father
