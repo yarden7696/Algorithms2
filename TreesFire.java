@@ -81,7 +81,7 @@ import java.util.concurrent.ArrayBlockingQueue;
             System.out.println("radius = " + radius + ", diameter = " + diameter + ", centers: " + centers
                     +", numCenters = "+numCenters);
         }
-        
+
         //////////////////////////////////init trees and main////////////////////////////////////////////////////
 
             public static class InitTrees {
