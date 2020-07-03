@@ -65,7 +65,8 @@ public class Best {
 
     public static void main(String[] args) {
        // int [] b=  new int[]{1, 7, 2, 3, -13, 2, 1, 10,-2,1,-20};
-        int [] b=  new int[]{7, -9, 2, 1};
+        //int [] b=  new int[]{7, -9, 2, 1};
+        int [] b=  new int[]{-7, -9, -2, -1};
         System.out.println("before best cycle : ");
         System.out.println(Arrays.toString(best(b)));
         System.out.println("---------------------------------------------------------------------------");
