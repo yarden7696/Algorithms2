@@ -3,7 +3,6 @@ import java.util.Arrays;
 import java.util.Stack;
 import java.util.ArrayList;
 
-
     class Edge{
     int begin, end;
 
@@ -12,12 +11,11 @@ import java.util.ArrayList;
         end = e;
     }
 
-    public String toString(){
-        return "(" + begin + "," + end + ")";
-    }
-}
+    public String toString(){ return "(" + begin + "," + end + ")"; } }
+
 
     class EulerCycle { // inner class
+        
     ArrayList<Integer>[] graph;//input graph
     ArrayList<Integer> C; // C is the Euler cycle
     Stack<Integer> S; // S present our path on the graph, if we closed cycle so we push the last vertex to the
@@ -25,6 +23,7 @@ import java.util.ArrayList;
     int degrees[]; // the degree of each vertex in the graph
     int numOfVertexes; // how much vertexes there is in the graph
 
+        
     // constructor
     public EulerCycle(ArrayList<Integer>[] graph) {
         S = new Stack<Integer>();
