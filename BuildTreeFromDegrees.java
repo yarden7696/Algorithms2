@@ -39,5 +39,4 @@ public class BuildTreeFromDegrees {
         tree = initTreeFromDegrees(degrees2);
         System.out.println(Arrays.toString(tree));
     }
-
 }
