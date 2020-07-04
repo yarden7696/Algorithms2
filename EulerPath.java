@@ -1,4 +1,4 @@
-package Algo2;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -78,10 +78,12 @@ import java.util.Stack;
             }
             return ans;
         }
+
         public void printEulerPath(){
             System.out.println("The Euler Path:");
             System.out.println(C.toString());
         }
+
         public void printGraph(){
             System.out.println("The Graph:");
             System.out.println(Arrays.toString(graph));
@@ -109,6 +111,5 @@ import java.util.Stack;
             return graph;
 
         }
-
     }
 

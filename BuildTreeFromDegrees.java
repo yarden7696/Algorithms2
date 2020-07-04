@@ -1,10 +1,11 @@
 package Algo2;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
 public class BuildTreeFromDegrees {
-    public static ArrayList<Integer>[] initTreeFromDegrees(int degrees[]){
+
+    public static ArrayList<Integer>[] initTreeFromDegrees(int degrees[]) {
         Arrays.sort(degrees);
         reverseArray(degrees);
         int n = degrees.length;
@@ -24,6 +25,8 @@ public class BuildTreeFromDegrees {
         }
         return tree;
     }
+
+
     private static void reverseArray(int arr[]){
         for (int i=0; i<arr.length/2; i++){
             int temp = arr[i];
@@ -31,6 +34,10 @@ public class BuildTreeFromDegrees {
             arr[arr.length-i-1] = temp;
         }
     }
+
+
+
+
     public static void main(String[] args) {
         int[]degrees = {4,3,2,1,1,1,1,1};
         int degrees2[] = {1,1,3,3,1,4,1,1,1};

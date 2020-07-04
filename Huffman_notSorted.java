@@ -23,9 +23,9 @@ public class Huffman_notSorted {
             this.right = right;
         }
 
-        public Node(int letterNumber, int key){
+        public Node(int letterNumber, int freq){
             this.letterNumber = letterNumber;
-            this.freq = key;
+            this.freq = freq;
             this.parent = nil;
             this.left = nil;
             this.right = nil;
@@ -46,7 +46,7 @@ public class Huffman_notSorted {
 
     public static class HuffmanAlgorithmHeap {//O(nlog2(n))
          Node nodes[];
-        int numOfLeaves, numNodes, place;
+        int numOfLeaves, numNodes, len;
         final int nil = -1;
         String codes[];
         PriorityQueue<Node> queue;
@@ -57,8 +57,9 @@ public class Huffman_notSorted {
             numNodes = numOfLeaves*2-1;
             nodes = new Node[numNodes];
             codes = new String[numOfLeaves];
-            place = numOfLeaves;
-            for (int i=0; i<numOfLeaves; i++){//O(n)
+            len = numOfLeaves;
+
+            for (int i=0; i<numOfLeaves; i++){  //O(n) init tree
                 nodes[i] = new Node(i,freq[i]);
             }
             queue = new PriorityQueue<Node>(numOfLeaves);
@@ -75,12 +76,12 @@ public class Huffman_notSorted {
             for(int i=0; i<numOfLeaves-1; i++){//O(n)
                 Node n1 = queue.poll();//O(1)
                 Node n2 = queue.poll();//O(1)
-                Node node = new Node(place, n1.freq +n2.freq, n1.letterNumber, n2.letterNumber);
-                n1.setParent(place);
-                n2.setParent(place);
+                Node node = new Node(len, n1.freq +n2.freq, n1.letterNumber, n2.letterNumber);
+                n1.setParent(len);
+                n2.setParent(len);
                 queue.add(node);//O(1)
-                nodes[place] = node;
-                place++;
+                nodes[len] = node;
+                len++;
             }
             //// build the Huffman's Code for all letters
             for (int i=0; i<numOfLeaves; i++){//O(2n-1)
